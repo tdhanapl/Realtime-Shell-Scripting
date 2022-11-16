@@ -14,6 +14,6 @@ echo ${#Month[@]}
       array_var[2]="test3"
        array_var[3]="test4"
         array_var[4]="test5"
-	 array_var[5]="test6"
+	     array_var[5]="test6"
 	 #2. Print the contents of an array at a given index using the following commands:
 	  echo ${array_var[0]}

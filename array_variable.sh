@@ -24,4 +24,5 @@ $ echo ${array_var[*]}
 $ echo ${array_var[@]}
  test1 test2 test3 test4 test5 test6
 4. Print the length of an array (the number of elements in an array):
-$ echo ${#array_var[*]}6
+$ echo ${#array_var[*]}
+6
