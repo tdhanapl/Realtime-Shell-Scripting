@@ -1,6 +1,5 @@
 #############################Prechecks-before-Patch###########################################
 #!/bin/bash
-tput setf 2
 #host=/opt/hostipaddress #( hostip address in file)
 today=$(date +"%F")
 path=/var/server_precheck_patch-$today

@@ -1,5 +1,4 @@
 #!/bin/bash
-tput setf 2
 read -p "please enter the ip address to ping: " ipaddress
 until ping -c 3 $ipaddress
 do
