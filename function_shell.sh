@@ -1,6 +1,4 @@
 #!/bin/sh
-#tput setf 2
-
 #A function is defined as follows:
 ipaddress () {
 	   echo " hostname -i will display ipaddress of server"

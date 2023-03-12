@@ -1,7 +1,6 @@
 #!/bin/bash
-tput setf 2
 opt=y
-while [ $opt = y -o $opt = y ]
+while [ $opt = y -o $opt = Y ]
 do
 #echo -e "please enter the number: \c"
 #read -r num
@@ -15,7 +14,7 @@ fi
 #echo -e  "do yo want to contine [y/n]: \c"
 #read -r wish
 read -p "do you want to continue [y/n]: " wish
-if [ $wish = y -o $wish = y ]; then
+if [ $wish = y -o $wish = Y ]; then
 continue
 else 
 echo "thank you for exiting.."
