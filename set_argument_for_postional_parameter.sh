@@ -1,5 +1,4 @@
 #!/bin/bash
-tput setf 2
 set `date`
 echo "today is $1"
 echo "month is $2"

@@ -12,5 +12,5 @@ Here, \e[1;32m is the escape string to set the color to red and \e[0m resets the
 $ echo -e "\e[1;42m Green Background \e[0m"
 			or
 $ echo -e "\e[1;42m Green Background \e[42m"
-
+#These examples cover a subset of escape sequences. The documentation can be viewed with man console_codes
 

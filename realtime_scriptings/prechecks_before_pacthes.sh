@@ -10,7 +10,7 @@ path=/var/server_precheck_patch-$today
   lvs >> $path
   echo '==============================================Precheck_outputs of volume group ==================================================== ' >> $path
   vgs >> $path
-   echo '==============================================Precheck_outputs of volume group ==================================================== ' >> $path
+   echo '==============================================Precheck_outputs of physical volume ==================================================== ' >> $path
   pvs >> $path
   echo '=============================================Precheck_outputs of fstab entry===================================================== ' >> $path
   cat /etc/fstab >> $path

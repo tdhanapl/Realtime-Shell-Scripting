@@ -33,7 +33,7 @@ else
 echo "backup failed"
 fi
 
-####################################To known the login user details###################################
+##################To known the login user details###################################
 echo "please enter day (e.g Mon)"
 read day
 echo "please enter Month (e.g jun)"
@@ -62,7 +62,7 @@ echo "file $file is $(stat --printf='%s' $file) Bytes."
 done
 du -sh /tmp
 
-######################################To check the service status###################################
+###########################To check the service status###################################
 #!/bin/bash
 
 read -p "Enter start,stop,status,enabled,and Disabled  to perform action on  services: " action
@@ -105,7 +105,7 @@ echo -e  "this show the status\033[96m $status\033[0m"
 echo "${action} of  ${Service_name} .... "
 fi
 
-######################################Remote Server connectiviy checking#########################################
+#######################Remote Server connectiviy checking#########################################
 host=/opt/host_ipaddress #( hostip address in file)
 for ip in $(cat $host)
 do  
@@ -132,6 +132,7 @@ do
    echo "$ip is unable to ssh "
    fi
 done
+
 #######################################
 #!/bin/bash
 SCRIPT=""top -b -o +%MEM | head -n 30 > /var/cpu-loadaverage.log
@@ -156,7 +157,7 @@ for s in "${servers[@]}"; do
 done
 wait # If removed, you can run some other script here
 
-######################################Database daily log compress########################################
+#######################Database daily log compress########################################
 #refernces purpose
  #date --date="yesterday" | awk '{print $1}'
  #date | awk '{print $1}'
@@ -178,8 +179,8 @@ then
 echo "Your SSL Cert will expire in 30 days." | mail -s "SSL Cert
 Monitor" someone@example.com
 fi
-#############################Prechecks-before-Patch###########################################
 
+#######################Prechecks-before-Patch###########################################
 #!/bin/bash
 #host=/opt/hostipaddress #( hostip address in file)
 today=$(date +"%F")
@@ -213,7 +214,7 @@ path=/var/server_precheck_patch-$today
   uname -a >> $path
   echo '================================================================================================================== ' >> $path
 
-################################ check file size and compress or delete or move######################
+################# check file size and compress or delete or move######################
 #https://www.tutorialspoint.com/unix/unix-regular-expressions.htm
 size=$(du -ch /var/datastore/dhana.log  | grep total  | awk '{print $1}')
 mail=dhanapal703278@gmail.com
@@ -233,6 +234,7 @@ sudo  cp -rf $path $dest
 
 sudo echo "subject: IF file is greater than 70MB copy to remote sucess" | sendmail $mail
 fi
+
 ##########################ifcondition-chanage-configuration###################################################
 #!/bin/bash
 #Author=
@@ -311,6 +313,7 @@ find=$(find /home/xphenoapps/public_html/ -name "*htaccess*" -type f | wc -l)
    else
    echo "In /home/xphenoapps/public_html .htaccess file are not created more than 2"
    fi
+   
 ####################Redirection from a file to a command#############
 We can read data from a file as stdin with the less-than symbol (<):
 $ cmd < file

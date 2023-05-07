@@ -1,3 +1,4 @@
+###install using binary package 
 #!/bin/bash
 useradd postgres
 echo
@@ -25,3 +26,10 @@ chown postgres:postgres /var/lib/pgsql/14/data
 echo 
 chmod 750 /var/lib/pgsql/14/data
 su - postgres -c '/usr/local/pgsql/bin/initdb -D /var/lib/pgsql/14/data/; /usr/local/pgsql/bin/pg_ctl -D /var/lib/pgsql/14/data/  start; /usr/local/pgsql/bin/psql'
+ 
+ ## install using rpm package
+ sudo yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm
+sudo yum install -y postgresql14-server
+sudo /usr/pgsql-14/bin/postgresql-14-setup initdb
+sudo systemctl enable postgresql-14
+sudo systemctl start postgresql-14
