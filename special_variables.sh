@@ -7,7 +7,7 @@
 # $? specifies the exit status of the last command or the most recent execution process.
 # $$ specifies the process ID of the current script..
 # $! shows ID of the last background job.
-# $0 spec
+# $0  store script name as  variable.
 
 #!/bin/bash
 tput setf 2
@@ -18,3 +18,4 @@ echo "Quoted Values: $@"
 echo "Quoted Values: $*"
 echo "Total Number of Parameters : $#"
 echo "process id for this $$"
+echo "process id for this $!"

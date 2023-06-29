@@ -9,7 +9,7 @@ $! shows ID of the last background job.
 $0 specifies the name of the script to be invoked or capture.
 
 #############echo command in script of Shell Substitution############
-The following escape sequences which can be used in echo command −
+The following escape sequences which can be used in echo command 
 SYNOPSIS
        echo [SHORT-OPTION]... [STRING]...
        echo LONG-OPTION
@@ -39,12 +39,12 @@ NOTE:  your  shell  may  have its own version of echo, which usually supersedes 
        documentation for details about the options it supports.
 	   
 ##################Shell Functions##############
-#creating FunctionsTo declare a function, simply use the following syntax −
+#creating FunctionsTo declare a function, simply use the following syntax 
 function_name () {
 list of commands
 }
 #Example
-Following example shows the use of function −
+Following example shows the use of function 
 
 $ vim test.sh
 #!/bin/sh
@@ -54,11 +54,12 @@ Hello () {
 }
 # Invoke your function
 Hello
-Upon execution, you will receive the following output −
+Upon execution, you will receive the following output 
 :wq!
 
 $ ./test.sh
-Hello World
+Hello World 
+
 ########################Qutoes#########################
 var1=dhana
 var2=pal
@@ -90,7 +91,7 @@ All the arithmetical calculations are done using long integers.
 Relational Operators
 Bourne Shell supports the following relational operators that are specific to numeric values. These operators do not work for string values unless their value is numeric.
 For example, following operators will work to check a relation between 10 and 20 as well as in between "10" and "20" but not in between "ten" and "twenty".
-Assume variable a holds 10 and variable b holds 20 then −
+Assume variable a holds 10 and variable b holds 20 then 
 Show Examples
 #Operator	Description	Example
 -eq	Checks if the value of two operands are equal or not; if yes, then the condition becomes true.	[ $a -eq $b ] is not true.
@@ -103,7 +104,7 @@ It is very important to understand that all the conditional expressions should b
 
 Boolean Operators
 The following Boolean operators are supported by the Bourne Shell.
-Assume variable a holds 10 and variable b holds 20 then −
+Assume variable a holds 10 and variable b holds 20 then 
 Show Examples
 Operator	Description	Example
 !	This is logical negation. This inverts a true condition into false and vice versa.	[ ! false ] is true.
@@ -140,7 +141,7 @@ Test different filesystem-related attributes using different condition flags
 
 ###The if...else statements
 If else statements are useful decision-making statements which can be used to select an option from a given set of options.
-Unix Shell supports following forms of if…else statement −
+Unix Shell supports following forms of if…else statement 
 1.
 if [ condition ] ; then
 ....
@@ -160,7 +161,7 @@ fi  #statement
 
 ##Loops
 A loop is a powerful programming tool that enables you to execute a set of commands repeatedly. 
-In this  we will examine the following types of loops available to shell programmers −
+In this  we will examine the following types of loops available to shell programmers 
 while loop
 for loop
 until loop
@@ -202,7 +203,7 @@ do
 done
 
 #####Here is a simple example of loop nesting. 
-#Let's add another countdown loop inside the loop that you used to count to nine −
+#Let's add another countdown loop inside the loop that you used to count to nine 
 ##!/bin/sh
 a=0
 while [ "$a" -lt 10 ]    # this is loop1
@@ -218,14 +219,14 @@ do
 done
 
 #Sometimes you need to stop a loop or skip iterations of the loop.
-we will learn following two statements that are used to control shell loops− The break statement
+we will learn following two statements that are used to control shell loops to the break statement
 1.The continue statement
 2.The infinite Loop
 All the loops have a limited life and they come out once the condition is false or true depending on the loop.
 A loop may continue forever if the required condition is not met.
  A loop that executes forever without terminating executes for an infinite number of times. For this reason, such loops are called infinite loops.
 Example
-Here is a simple example that uses the while loop to display the numbers zero to nine −
+Here is a simple example that uses the while loop to display the numbers zero to nine.
 #!/bin/sh
 a=10
 until [ $a -lt 10 ]
@@ -239,13 +240,13 @@ done
 The break statement is used to terminate the execution of the entire loop, after completing the execution of all of the lines of code up to the break statement. 
 It then steps down to the code following the end of the loop.
 Syntax
-The following break statement is used to come out of a loop −
+The following break statement is used to come out of a loop 
 break
-The break command can also be used to exit from a nested loop using this format −
+The break command can also be used to exit from a nested loop using this format 
 break n
 #Here n specifies the nth enclosing loop to the exit from.
 Example
-Here is a simple example which shows that loop terminates as soon as a becomes 5 −
+Here is a simple example which shows that loop terminates as soon as a becomes 5 
 #!/bin/sh
 a=0
 while [ $a -lt 10 ]
@@ -257,14 +258,14 @@ do
    fi
    a=`expr $a + 1`
 done
-Upon execution, you will receive the following result −
+Upon execution, you will receive the following result 
 0
 1
 2
 3
 4
 5
-Here is a simple example of nested for loop. This script breaks out of both loops if var1 equals 2 and var2 equals 0 −
+Here is a simple example of nested for loop. This script breaks out of both loops if var1 equals 2 and var2 equals 0 
 #!/bin/sh
 for var1 in 1 2 3
 do
@@ -293,7 +294,7 @@ Like with the break statement, an integer argument can be given to the continue 
 continue n
 Here n specifies the nth enclosing loop to continue from.
 Example
-The following loop makes use of the continue statement which returns from the continue statement and starts processing the next statement −
+The following loop makes use of the continue statement which returns from the continue statement and starts processing the next statement 
 Live Demo
 #!/bin/sh
 NUMS="1 2 3 4 5 6 7"
@@ -342,7 +343,7 @@ esac
 ############Unix / Linux - Shell Quoting Mechanisms###########
 #https://www.tutorialspoint.com/unix/unix-quoting-mechanisms.htm
 
-##Double quotes take away the special meaning of all characters except the following −
+##Double quotes take away the special meaning of all characters except the following 
 $ for parameter substitution
 #Backquotes for command substitution
 
@@ -352,13 +353,13 @@ $ for parameter substitution
 \\ to enable embedded backslashes
 All other \ characters are literal (not special)
 Characters within single quotes are quoted just as if a backslash is in front of each character. This helps the echo command display properly.
-If a single quote appears within a string to be output, you should not put the whole string within single quotes instead you should precede that using a backslash (\) as follows −
+If a single quote appears within a string to be output, you should not put the whole string within single quotes instead you should precede that using a backslash (\) as follows 
 #example
 echo "It\'s Shell Programming"
 
 ######File Test Operators###############
 We have a few operators that can be used to test various properties associated with a Unix file.
-Assume a variable file holds an existing file name "test" the size of which is 100 bytes and has read, write and execute permission on −
+Assume a variable file holds an existing file name "test" the size of which is 100 bytes and has read, write and execute permission on 
 Show Examples
 Operator	Description	Example
 -b file	Checks if file is a block special file; if yes, then the condition becomes true.	

@@ -4,7 +4,7 @@ while [ $opt = y -o $opt = Y ]
 do
 #echo -e "please enter the number: \c"
 #read -r num
-read -p "please enter the number:" num
+read -p "please enter the number: " num
 if [ $num -le 50 ]; then
 sq=`expr $num \* $num`
 echo "square of provided number $num: $sq"

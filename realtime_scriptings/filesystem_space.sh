@@ -1,5 +1,5 @@
 #!/bin/bash
-tput setf 2
+
 hostname=$(hostname)
 filespace=$(df -h  |grep -ivE "filesystem|tmpfs" | sed 's/%//gI' | awk '{print $5}')
 mail=dhanapal70378@gmail.com

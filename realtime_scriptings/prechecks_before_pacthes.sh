@@ -1,5 +1,13 @@
 #############################Prechecks-before-Patch###########################################
 #!/bin/bash
+######################################################################
+### Objective : To get the Server  related basic  details          ###
+### Author    : T Dhanapal                                         ###
+### Date      :                                                    ###
+### Changes   :                                                    ###  
+### Version   :                                                    ###
+######################################################################
+######################################################################
 #host=/opt/hostipaddress #( hostip address in file)
 today=$(date +"%F")
 path=/var/server_precheck_patch-$today
@@ -10,7 +18,7 @@ path=/var/server_precheck_patch-$today
   lvs >> $path
   echo '==============================================Precheck_outputs of volume group ==================================================== ' >> $path
   vgs >> $path
-   echo '==============================================Precheck_outputs of physical volume ==================================================== ' >> $path
+  echo '==============================================Precheck_outputs of physical volume ==================================================== ' >> $path
   pvs >> $path
   echo '=============================================Precheck_outputs of fstab entry===================================================== ' >> $path
   cat /etc/fstab >> $path
@@ -21,7 +29,7 @@ path=/var/server_precheck_patch-$today
   echo '=============================================Precheck_outputs of routes==================================================== ' >> $path
   route -n >> $path
   echo '==============================================Precheck_outputs of netstat=================================================== ' >> $path
-  netstat -rn >> $path
+  netstat -nutlp >> $path
   echo '=============================================Precheck_outputs of ifconfig===================================================== ' >> $path
   ifconfig -a >> $path
   echo '==============================================Precheck_outputs of os release==================================================== ' >> $path
