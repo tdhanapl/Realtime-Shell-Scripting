@@ -22,7 +22,7 @@ Echo the STRING(s) to standard output.
 #If -e is in effect, the following sequences are recognized:
 Sr.No.	Escape 		& Description
 1		\\ 			   backslash
-2		\a 			   alert 	(BEL)
+2		\a 	 		   alert 	(BEL)
 3		\b			      backspace
 4		\c			      suppress trailing newline (or) produce no further output
 5		\f			      form feed
@@ -54,7 +54,7 @@ Hello () {
 }
 # Invoke your function
 Hello
-Upon execution, you will receive the following output 
+#Upon execution, you will receive the following output 
 :wq!
 
 $ ./test.sh
